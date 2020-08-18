@@ -79,10 +79,53 @@ body {
 	clear: both;
 	margin-top: -30px;
 }
-/* END HEADER */
+.container .jumbotron{
+	box-shadow: 0 0 50px #3f0c1f;
+		border: 2px solid #3f0c1f;
+}
+#menu-tile, #special-tile, #map-tile{
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border:2px solid #3f0c1f;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+#menu-tile:hover, #special-tile:hover, #map-tile:hover{
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile{
+	background:url("../images/menu-tile.jpg") no-repeat;
+	background-position: center;
+
+}
+#special-tile{
+	background:url("../images/specials-tile.jpg")no-repeat;
+	background-position: center;
+
+}
+#menu-tile span, #special-tile span, #map-tile span{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .7;
+}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+	.container .jumbotron{
+		background:url("../images/jumbotron_1200.jpg") no-repeat;
+		height: 675px;
+		
+	}
 
 }
 
@@ -95,12 +138,21 @@ body {
     height: 100px;
     margin: 5px 5px 5px 0;
   }
+  .container .jumbotron{
+		background:url("../images/jumbotron_992.jpg") no-repeat;
+		height: 558px;
+		
+	}
   /* End Header */
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-
+	.container .jumbotron{
+		background:url("../images/jumbotron_768.jpg") no-repeat;
+		height: 448px;
+		
+	}
 }
 
 /********** Extra small devices only **********/
@@ -127,5 +179,50 @@ body {
 		font-size: 1em;
 		margin-right: 10px;
 	}
+	#call-btn > a{
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+	}
+	.btn span{
+		margin-right: 10px;
+	}
+
+  #call-btn a:hover{
+  	background-color: grey;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .container .jumbotron{
+  	margin-top:  30px;
+  	padding: 0;
+  }
+  #menu-tile, #special-tile{
+  	width: 360px;
+  	margin:0 auto 15px;
+  }
 }	
-  /* Header */
+/*super extra small devices only*/
+ @media (max-width: 479px){
+ 	/*header*/
+ 	.navbar-brand h1{
+ 		font-size: 6vw;
+ 		padding-top: 5px;
+ 	}
+ 	/*end of header*/
+
+ 	/*homepage*/
+ 	#menu-tile, #special-tile{
+ 		width: 280px;
+ 		margin:0 auto 15px;
+ 	}
+ 	/*end of homepage*/
+ }
